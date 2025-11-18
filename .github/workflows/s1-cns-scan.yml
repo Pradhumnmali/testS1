@@ -24,6 +24,7 @@ jobs:
           --management-console-url https://apne1-1101-nfr.sentinelone.net
           --scope-type SITE
           --scope-id 1966654988185990355
+          --tag ${{ secrets.tag }}
  
       - name: Mark repo as safe for git
         run: git config --global --add safe.directory $PWD
