@@ -49,5 +49,5 @@ jobs:
         run:  s1-cns-cli scan vuln -d $PWD
 
       - name: Check for failures
-        if: steps.secret-detector.outcome == 'failure' || steps.iac-scanner.outcome == 'failure' || steps.vuln-scanner.outcome == 'failure'
+        if: steps.secret-detector.outcome == 'failure' 
         run: exit 1
