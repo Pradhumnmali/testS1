@@ -41,6 +41,7 @@ jobs:
           --repo-full-name ${{ github.repository }}
           --repo-url ${{ github.server_url }}/${{ github.repository }}
           --provider GITHUB
+          --tag ${{ secrets.tag }}
         continue-on-error: true
  
       - name: Run IaC Scanner
@@ -52,6 +53,7 @@ jobs:
           --repo-url ${{ github.server_url }}/${{ github.repository }}
           --branch ${{ env.BRANCH }}
           --provider GITHUB
+          --tag ${{ secrets.tag }}
         continue-on-error: true
  
       - name: Run Vulnerability Scanner
