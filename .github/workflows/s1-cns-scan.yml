@@ -2,9 +2,8 @@ name: SentinelOne CNS Scan
 
 on:
   # Triggers the workflow when pull_request created on master/main branch
-  pull_request:
-    types: [ opened, reopened, synchronize ]
-    branches: [ master, main ]
+  push:
+    branches: [ main ]
 
 jobs:
   s1-shift-left-cli:
